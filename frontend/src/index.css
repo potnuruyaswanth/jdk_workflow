@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* DevTools style panels */
+.devtools-panel {
+  @apply bg-jvm-darker border border-gray-700 rounded-lg overflow-hidden;
+}
+
+.devtools-header {
+  @apply bg-jvm-dark border-b border-gray-700 px-4 py-2 font-semibold text-sm text-gray-300;
+}
+
+.devtools-content {
+  @apply p-4;
+}
+
+/* Bytecode instruction highlighting */
+.bytecode-instruction {
+  @apply font-mono text-xs px-3 py-1.5 border-l-2 border-transparent hover:bg-gray-800/50 transition;
+}
+
+.bytecode-instruction.active {
+  @apply border-jvm-blue bg-blue-500/10;
+}
+
+/* Stack animation */
+.stack-item {
+  @apply bg-gradient-to-r from-purple-600 to-purple-500 rounded px-3 py-2 text-white text-sm font-mono;
+}
+
+/* Heap object */
+.heap-object {
+  @apply bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg p-4 text-white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1f2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #61dafb;
+  border-radius: 4px;
+}
+
+/* Monaco Editor custom styling */
+.monaco-editor {
+  border-radius: 8px;
+}
+
+/* JVM architecture node */
+.jvm-node {
+  @apply bg-jvm-darker border-2 border-gray-700 rounded-lg p-4 transition-all;
+}
+
+.jvm-node.active {
+  @apply border-jvm-blue shadow-lg shadow-blue-500/20;
+}
+
+/* 3D Canvas container */
+.canvas-3d {
+  @apply w-full h-full bg-black/20 rounded-lg;
+}
+
+/* Log entry */
+.log-entry {
+  @apply font-mono text-xs px-3 py-1 border-l-2 border-gray-700;
+}
+
+.log-entry.gc {
+  @apply border-green-500 bg-green-500/10;
+}
+
+.log-entry.jit {
+  @apply border-purple-500 bg-purple-500/10;
+}
+
+.log-entry.error {
+  @apply border-red-500 bg-red-500/10;
+}

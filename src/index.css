@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism panels */
+.glass-panel {
+  @apply bg-glass backdrop-blur-md border border-primary/20 rounded-lg;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Interactive elements */
+.btn-primary {
+  @apply px-6 py-3 bg-primary text-dark font-semibold rounded-lg hover:shadow-lg hover:shadow-primary/50 transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-slate-700 text-white font-semibold rounded-lg border border-primary/50 hover:bg-slate-600 transition-all duration-300;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 217, 255, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 217, 255, 0.8);
+}
+
+/* Monaco Editor customization */
+.monaco-editor {
+  background: #1a1f3a !important;
+  color: #e0e7ff !important;
+}
+
+.monaco-editor .mtk1 {
+  color: #e0e7ff !important;
+}
+
+/* React Flow customization */
+.react-flow__node {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border: 2px solid rgba(0, 217, 255, 0.5) !important;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.1);
+}
+
+.react-flow__node.active {
+  border: 2px solid #00d9ff !important;
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.5) !important;
+}
+
+.react-flow__edge {
+  stroke: rgba(0, 217, 255, 0.5) !important;
+}
+
+.react-flow__edge.active {
+  stroke: #00d9ff !important;
+  stroke-width: 3 !important;
+}
+
+/* Animation for code blocks */
+.code-block {
+  @apply font-mono text-xs bg-darker rounded-lg p-4 border border-primary/30 overflow-x-auto;
+}
+
+/* Hover effects */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Tooltip styling */
+.tooltip {
+  @apply absolute z-50 px-3 py-2 text-sm bg-slate-900 text-primary rounded-lg whitespace-nowrap shadow-lg;
+}
